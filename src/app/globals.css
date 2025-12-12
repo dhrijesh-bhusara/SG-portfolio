@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-luxury-off-white text-luxury-charcoal font-body;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-light;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  @apply text-h1;
+}
+
+h2 {
+  @apply text-h2;
+}
+
+h3 {
+  @apply text-h3;
+}
+
+p {
+  @apply mb-6 last:mb-0;
+}
+
+a {
+  @apply transition-colors duration-300;
+}
+
+button {
+  @apply transition-all duration-300;
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-4 outline-luxury-accent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-luxury-beige-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-luxury-grey-medium rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-luxury-grey;
+}
+
+/* Selection */
+::selection {
+  @apply bg-luxury-accent text-luxury-black;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .container-luxury {
+    @apply mx-auto px-6 md:px-8 lg:px-12 max-w-container;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    #f5f3f0 4%,
+    #e8e4df 25%,
+    #f5f3f0 36%
+  );
+  background-size: 1000px 100%;
+}
