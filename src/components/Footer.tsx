@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-display mb-4 text-luxury-beige">LuxArch</h3>
+            <h3 className="text-xl font-display mb-4 text-luxury-beige">S G Architects</h3>
             <p className="text-luxury-grey-light text-sm leading-relaxed">
               Creating spaces of exceptional quality and enduring elegance through refined
               architectural design.
@@ -59,10 +59,10 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:contact@luxarch.com"
+                  href="mailto:contact@sgarchitects.com"
                   className="text-luxury-grey-light hover:text-luxury-accent transition-colors"
                 >
-                  contact@luxarch.com
+                  contact@sgarchitects.com
                 </a>
               </li>
               <li className="text-luxury-grey-light">+1 (555) 123-4567</li>
@@ -72,7 +72,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-luxury-charcoal-light text-center text-sm text-luxury-grey-light">
-          <p>&copy; {currentYear} LuxArch. All rights reserved.</p>
+          <p>&copy; {currentYear} S G Architects. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import ProjectsGrid from '@/components/ProjectsGrid';
 import { SAMPLE_PROJECTS } from '@/data/sampleProjects';
 
 export const metadata: Metadata = {
-  title: 'Projects | LuxArch',
+  title: 'Projects | S G Architects',
   description: 'Explore our portfolio of luxury interior architecture and design projects',
 };
 

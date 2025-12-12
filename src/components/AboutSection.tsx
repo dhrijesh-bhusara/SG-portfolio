@@ -23,7 +23,7 @@ export default function AboutSection() {
           Refined Spaces, Timeless Design
         </motion.h2>
         <motion.p variants={fadeUp} className="text-body-lg text-luxury-grey-medium mb-6">
-          LuxArch is a distinguished architecture and interior design studio specializing in
+          S G Architects is a distinguished architecture and interior design studio specializing in
           creating spaces of exceptional quality and enduring elegance.
         </motion.p>
         <motion.p variants={fadeUp} className="text-body text-luxury-grey mb-6">

@@ -1,4 +1,4 @@
-# LuxArch - Luxury Architecture Portfolio
+# SG Architects - Luxury Architecture Portfolio
 
 A production-ready, ultra-minimalist architecture portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion, and Supabase.
 

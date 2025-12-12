@@ -1,7 +1,7 @@
 import { SEOMetadata } from './types';
 
-const SITE_NAME = 'LuxArch';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://luxarch.com';
+const SITE_NAME = 'S G Architects';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://sgarchitects.com';
 const DEFAULT_OG_IMAGE = '/og-image.jpg';
 
 export function buildMetaTags(metadata: SEOMetadata) {

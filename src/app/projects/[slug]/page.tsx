@@ -21,12 +21,12 @@ export async function generateMetadata(props: ProjectPageProps): Promise<Metadat
 
   if (!project) {
     return {
-      title: 'Project Not Found | LuxArch',
+      title: 'Project Not Found | S G Architects',
     };
   }
 
   return {
-    title: `${project.title} | LuxArch`,
+    title: `${project.title} | S G Architects`,
     description: project.description,
     openGraph: {
       images: [project.coverImage.url],

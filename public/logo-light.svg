@@ -1,0 +1,9 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- S&G Logo with golden color -->
+  <path d="M200 300 Q250 250, 300 300 Q350 350, 300 400 Q250 450, 200 400 Q150 350, 200 300 Z" fill="#B8934A" stroke="#B8934A" stroke-width="3"/>
+  <path d="M420 300 Q470 250, 520 300 Q570 350, 520 400 Q470 450, 420 400 Q370 350, 420 300 Z" fill="#B8934A" stroke="#B8934A" stroke-width="3"/>
+  <path d="M280 350 Q320 320, 360 350 L360 420 Q320 450, 280 420 Z" fill="#B8934A"/>
+  
+  <!-- ARCHITECTS text -->
+  <text x="380" y="480" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" fill="#B8934A" letter-spacing="0.15em" text-anchor="middle">ARCHITECTS</text>
+</svg>

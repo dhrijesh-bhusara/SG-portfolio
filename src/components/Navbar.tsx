@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="container-luxury">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center group" aria-label="LuxArch Home">
+          <Link href="/" className="flex items-center group" aria-label="S G Architects Home">
             <svg
               width="48"
               height="48"
@@ -48,7 +48,7 @@ export default function Navbar() {
               <line x1="20" y1="24" x2="28" y2="24" stroke="#E8E4DF" strokeWidth="1" />
             </svg>
             <span className="ml-3 text-xl font-display text-luxury-beige tracking-wider">
-              LuxArch
+              S G Architects
             </span>
           </Link>
 

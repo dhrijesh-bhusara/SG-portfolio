@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'LuxArch | Luxury Interior Architecture Studio',
+  title: 'S G Architects | Luxury Interior Architecture Studio',
   description: 'Premium architectural design and interior spaces for discerning clients. Ultra-minimalist, modern aesthetics.',
   keywords: ['architecture', 'interior design', 'luxury', 'minimalist', 'premium'],
 };
