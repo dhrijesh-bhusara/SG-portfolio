@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
@@ -34,19 +35,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center group" aria-label="S G Architects Home">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-              fill="none"
+            <Image
+              src="/Logo.png"
+              alt="S G Architects Logo"
+              width={96}
+              height={96}
               className="transition-transform duration-300 group-hover:scale-105"
-              aria-hidden="true"
-            >
-              <rect x="8" y="8" width="32" height="32" stroke="#E8E4DF" strokeWidth="1" />
-              <rect x="14" y="14" width="20" height="20" stroke="#C9B896" strokeWidth="1" />
-              <line x1="24" y1="20" x2="24" y2="28" stroke="#E8E4DF" strokeWidth="1" />
-              <line x1="20" y1="24" x2="28" y2="24" stroke="#E8E4DF" strokeWidth="1" />
-            </svg>
+              priority
+            />
             <span className="ml-3 text-xl font-display text-luxury-beige tracking-wider">
               S G Architects
             </span>

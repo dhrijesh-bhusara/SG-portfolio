@@ -138,6 +138,7 @@ export default function ContactForm() {
                 } text-luxury-off-white focus:border-luxury-accent focus:outline-none transition-colors`}
                 aria-invalid={!!errors.name}
                 aria-describedby={errors.name ? 'name-error' : undefined}
+                suppressHydrationWarning
               />
               {errors.name && (
                 <p id="name-error" className="text-red-400 text-sm mt-1">
@@ -161,6 +162,7 @@ export default function ContactForm() {
                 } text-luxury-off-white focus:border-luxury-accent focus:outline-none transition-colors`}
                 aria-invalid={!!errors.email}
                 aria-describedby={errors.email ? 'email-error' : undefined}
+                suppressHydrationWarning
               />
               {errors.email && (
                 <p id="email-error" className="text-red-400 text-sm mt-1">
@@ -184,6 +186,7 @@ export default function ContactForm() {
                 } text-luxury-off-white focus:border-luxury-accent focus:outline-none transition-colors resize-none`}
                 aria-invalid={!!errors.message}
                 aria-describedby={errors.message ? 'message-error' : undefined}
+                suppressHydrationWarning
               />
               {errors.message && (
                 <p id="message-error" className="text-red-400 text-sm mt-1">
@@ -202,6 +205,7 @@ export default function ContactForm() {
               type="submit"
               disabled={isSubmitting}
               className="w-full px-8 py-4 bg-luxury-accent text-luxury-black font-medium tracking-wide hover:bg-luxury-beige transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-luxury-accent focus:ring-offset-2 focus:ring-offset-luxury-charcoal"
+              suppressHydrationWarning
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

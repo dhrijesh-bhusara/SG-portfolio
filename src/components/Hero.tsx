@@ -1,10 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import ImageWrapper from './ImageWrapper';
-import { fetchLuxuryInteriorImages } from '@/lib/imageFetcher';
-import { ImageResult } from '@/lib/types';
+import Image from 'next/image';
 import { fadeUp, staggerContainer } from './Animations';
 
 const HERO_COPY = [
@@ -23,42 +20,28 @@ const HERO_COPY = [
 ];
 
 export default function Hero() {
-  const [heroImage, setHeroImage] = useState<ImageResult | null>(null);
-  const [copyIndex] = useState(0);
-
-  useEffect(() => {
-    fetchLuxuryInteriorImages({ query: 'luxury minimalist interior architecture', count: 1 })
-      .then((images) => {
-        if (images.length > 0) {
-          setHeroImage(images[0]);
-        }
-      })
-      .catch(console.error);
-  }, []);
-
+  const copyIndex = 0;
   const currentCopy = HERO_COPY[copyIndex];
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        {heroImage && (
-          <ImageWrapper
-            src={heroImage.url}
-            alt={heroImage.alt}
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-        )}
+        <Image
+          src="/a1.png"
+          alt="Luxury architectural interior"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
         {/* Dark gradient overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-luxury-black/60 via-luxury-black/40 to-luxury-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="container-luxury">
+      <div className="relative z-10 h-full flex items-start pt-32 md:pt-40">
+        <div className="w-full px-4 md:px-8 lg:px-16 xl:px-24">
           <motion.div
             variants={staggerContainer}
             initial="hidden"

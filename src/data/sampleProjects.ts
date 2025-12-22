@@ -23,7 +23,7 @@ export const SAMPLE_PROJECTS: Project[] = [
     size: '3,200 sq ft',
     featured: true,
     coverImage: {
-      url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920',
+      url: '/a2.jpg',
       alt: 'Modern loft interior with high ceilings and exposed brick',
       width: 1920,
       height: 1280,
