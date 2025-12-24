@@ -1,3 +1,7 @@
+'use client';
+
+import SocialLinks from './SocialLinks';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -71,8 +75,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-luxury-charcoal-light text-center text-sm text-luxury-grey-light">
-          <p>&copy; {currentYear} S G Architects. All rights reserved.</p>
+        <div className="pt-8 border-t border-luxury-charcoal-light">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <p className="text-sm text-luxury-grey-light">&copy; {currentYear} S G Architects. All rights reserved.</p>
+            <SocialLinks variant="footer" size="md" />
+          </div>
         </div>
       </div>
     </footer>

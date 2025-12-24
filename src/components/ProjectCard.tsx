@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import ImageWrapper from './ImageWrapper';
+import Image from 'next/image';
 import { Project } from '@/lib/types';
 
 interface ProjectCardProps {
@@ -27,12 +27,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="w-full h-full"
           >
-            <ImageWrapper
+            <Image
               src={project.coverImage.url}
               alt={project.coverImage.alt}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </motion.div>
 

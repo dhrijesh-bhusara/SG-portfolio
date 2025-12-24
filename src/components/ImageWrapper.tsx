@@ -33,18 +33,15 @@ export default function ImageWrapper({
       <Image
         src={src}
         alt={alt}
-        width={width}
-        height={height}
-        fill={fill}
+        {...(fill ? { fill: true } : { width: width || 1920, height: height || 1280 })}
         className={`transition-all duration-700 ${
           isLoading ? 'scale-110 blur-lg' : 'scale-100 blur-0'
         } ${className}`}
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
         priority={priority}
         sizes={sizes}
         placeholder={blurDataURL ? 'blur' : 'empty'}
         blurDataURL={blurDataURL}
-        quality={90}
       />
     </div>
   );
