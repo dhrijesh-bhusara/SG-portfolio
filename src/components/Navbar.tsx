@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import ArchitectInfo from './ArchitectInfo';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -33,67 +32,51 @@ export default function Navbar() {
       }`}
     >
       <div className="container-luxury">
-        <div className="flex items-center justify-between py-4 lg:py-5">
-          {/* Left: Logo */}
+        <div className="flex items-center justify-between py-2 lg:py-3">
+          {/* Left: Logo & Branding */}
           <Link 
             href="/" 
-            className="flex-shrink-0 group relative" 
+            className="flex items-center gap-3 group" 
             aria-label="S G Architects Home"
           >
             <motion.div 
-              className="relative rounded-lg overflow-hidden bg-gradient-to-br from-luxury-accent/10 to-transparent p-2"
-              whileHover={{ scale: 1.08 }}
+              className="relative flex-shrink-0"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Image
-                src="/Logo.png"
+                src="/logo.png"
                 alt="S G Architects"
-                width={56}
-                height={56}
-                className="transition-transform duration-300 group-hover:scale-105"
+                width={96}
+                height={96}
+                className="transition-transform duration-300"
                 priority
               />
             </motion.div>
-          </Link>
-
-          {/* Center: Branding */}
-          <Link 
-            href="/" 
-            className="hidden sm:flex flex-col items-center gap-1 group flex-1 justify-center"
-          >
-            <div className="flex flex-col items-center">
-              <span className="text-2xl font-display text-luxury-beige tracking-widest font-bold leading-none">
-                S G
+            <div className="hidden sm:flex flex-col gap-1">
+              <span className="text-lg font-display text-luxury-beige tracking-wider font-semibold leading-tight">
+                SG Architects
               </span>
-              <span className="text-xs text-luxury-accent tracking-[0.2em] font-semibold uppercase mt-1">
-                Architects
+              <span className="text-xs text-luxury-grey-light tracking-wider font-light">
+                Ar. Satish Gurubaxani
               </span>
             </div>
-            <span className="text-xs text-luxury-grey-light tracking-wider font-light mt-2">
-              Ar. Satish Gurubaxani
-            </span>
           </Link>
 
           {/* Right: Navigation & Info */}
-          <div className="flex items-center gap-2 lg:gap-8">
+          <div className="flex items-center gap-2 lg:gap-6 ml-auto">{" "}
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6">{" "}
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-luxury-beige-light text-sm font-light tracking-wider uppercase hover:text-luxury-accent transition-colors duration-300 group"
+                  className="relative text-luxury-beige-light text-base font-light tracking-wider uppercase hover:text-luxury-accent transition-colors duration-300 group"
                 >
                   <span className="relative z-10">{link.label}</span>
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-luxury-accent transition-all duration-300 group-hover:w-full" />
                 </Link>
               ))}
-              
-              {/* Separator */}
-              <div className="w-px h-6 bg-luxury-accent/30" />
-              
-              {/* Architect Info Button */}
-              <ArchitectInfo />
             </div>
 
             {/* Mobile Menu Button */}
@@ -137,7 +120,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-luxury-beige-light text-lg font-light tracking-wider uppercase py-2 hover:text-luxury-accent transition-colors"
+                    className="block text-luxury-beige-light text-xl font-light tracking-wider uppercase py-2 hover:text-luxury-accent transition-colors"
                   >
                     {link.label}
                   </Link>
